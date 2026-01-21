@@ -1,0 +1,36 @@
+{
+	"name": "@shanewwarren/mcp-sst",
+	"version": "0.1.0",
+	"description": "MCP server for SST dev logs and process control",
+	"type": "module",
+	"main": "dist/index.js",
+	"bin": {
+		"mcp-sst": "./dist/index.js"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc",
+		"dev": "tsc -w",
+		"start": "node dist/index.js",
+		"prepublishOnly": "npm run build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/shanewwarren/mcp-sst.git"
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com"
+	},
+	"dependencies": {
+		"@modelcontextprotocol/sdk": "^1.0.0"
+	},
+	"devDependencies": {
+		"@types/node": "^22.0.0",
+		"typescript": "^5.6.0"
+	},
+	"engines": {
+		"node": ">=20.0.0"
+	}
+}
