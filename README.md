@@ -4,19 +4,11 @@ MCP server for streaming SST dev logs and controlling the SST dev process.
 
 ## Quick Start
 
-**1. Configure npm to use GitHub Packages for this scope:**
+Add to Claude Code:
 
 ```bash
-echo "@shanewwarren:registry=https://npm.pkg.github.com" >> ~/.npmrc
+claude mcp add sst -- npx github:shanewwarren/mcp-sst /path/to/your/sst/project
 ```
-
-**2. Add to Claude Code:**
-
-```bash
-claude mcp add sst -- npx @shanewwarren/mcp-sst@latest /path/to/your/sst/project
-```
-
-That's it. No authentication required for public packages.
 
 ## Alternative: Manual Configuration
 
@@ -28,7 +20,7 @@ Add to `~/.claude/mcp.json` (or `.claude/mcp.json` in your project):
     "sst": {
       "command": "npx",
       "args": [
-        "@shanewwarren/mcp-sst@latest",
+        "github:shanewwarren/mcp-sst",
         "/path/to/your/sst/project"
       ]
     }
